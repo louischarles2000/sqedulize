@@ -16,7 +16,10 @@ const cardIconStyle = {
       padding: "15px",
       marginTop: "-20px",
       marginRight: "15px",
-      float: "left"
+      float: "left",
+      "&:hover,&:focus,&": {
+        // transform: 'scale(1.05)'
+      }
     }
   },
   warningCardHeader,

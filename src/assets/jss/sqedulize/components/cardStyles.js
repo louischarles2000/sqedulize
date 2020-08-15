@@ -19,7 +19,11 @@ import {
       flexDirection: "column",
       minWidth: "0",
       wordWrap: "break-word",
-      fontSize: ".875rem"
+      fontSize: ".875rem",
+      cursor: 'pointer',
+      "&:hover,&:visited,&": {
+        // transform: 'scale(1.05)'
+      }
     },
     cardPlain: {
       background: "transparent",

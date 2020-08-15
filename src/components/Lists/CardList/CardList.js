@@ -23,8 +23,9 @@ const CardList = props => {
         <GridItem xs={12} sm={6} md={3} key={list.name + index}>
             <Card>
                 <CardHeader color="success" stats icon>
-                    <CardIcon color="success">
-                        <List />
+                    <CardIcon color={list.color}>
+                        {console.log(list.color)}
+                        <list.icon />
                     </CardIcon>
                     <p className={classes.cardCategory}>Incomplete</p>
                     <h3 className={classes.cardTitle}>{list.listName}</h3>
