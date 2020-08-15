@@ -1,11 +1,14 @@
-# Default mode
+# Sqedulize
+This is a productivity app for handling normal day tasks and developer tasks.
+
+## Default mode
 The app has a default mode that is basically a to do app :D.
 It will have features like;
 - [ ] Adding a list
 - [ ] Adding tasks to the added list
 - [ ] Marking tasks status either **done** or **in progress**
 
-# Developer mode
+## Developer mode
 The app has a mode for developers that help keep track on projects.
 Ite will have features like;
 - [ ] Adding a new project
