@@ -1,7 +1,15 @@
 # Sqedulize
 This is a productivity app for handling normal day tasks and developer tasks.
 
-## Default mode
+**What I used**
+- React
+- Redux
+- Material UI
+- Firebase
+
+> Firebase is used here for user authentication and as a database
+
+## Default mode (to-do)
 The app has a default mode that is basically a to do app :D.
 It will have features like;
 - [ ] Adding a list

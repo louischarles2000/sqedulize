@@ -10,41 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import SideDrawer from '../../components/Drawer/Drawer';
 import AppbarComp from '../../components/Appbar/Appbar';
+import styles from '../../assets/jss/sqedulize/layouts/layoutStyles';
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex'
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
-  appBar: {
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-}));
+const useStyles = makeStyles(styles);
 
 const Layout = (props) => {
   const classes = useStyles();
@@ -55,27 +23,15 @@ const Layout = (props) => {
     setMobileOpen(!mobileOpen);
   };
 
+  const closeDrawer = () => {
+    setMobileOpen(false);
+  }
+
   return (
     <div className={classes.root}>
       <CssBaseline />
-      {/* <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            Responsive drawer
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
-      <AppbarComp />
-      <SideDrawer mobileOpen={mobileOpen} toggle={handleDrawerToggle}/>
+      <AppbarComp toggle={handleDrawerToggle}/>
+      <SideDrawer mobileOpen={mobileOpen} toggle={closeDrawer}/>
 
       {/* Main route entries */}
       <main className={classes.content}>
