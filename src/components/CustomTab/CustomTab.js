@@ -5,21 +5,21 @@ import { Tabs, Tab, makeStyles } from '@material-ui/core';
 
 import styles from '../../assets/jss/sqedulize/components/customTabsStyle';
 import Card from '../Card/Card';
-import { CardHeader } from '@material-ui/core';
+import CardBody from '../Card/CardBody';
+import CardHeader from '../Card/CardHeader';
 
 const useStyles = makeStyles(styles);
 
 const CustomTab = props => {
+    const classes = useStyles();
     const [value, setValue] = React.useState('');
-
     const changeVlaueHandler = (event, val) => {
         setValue(val);
     }
-    const classes = useStyles();
-    const { headerColor, plainTabs, tabs, title, rtlActive } = props;
+    const { headerColor, plainTabs, tabs, title } = props;
 
     return(
-        <Card plain={plainTabs}>
+        <Card plain={plainTabs} onClick={props.clicked}>
             <CardHeader color={headerColor} plain={plainTabs}>
                 {title !== undefined ? <div className={classes.cardTitle}>{title}</div> : null}
                 <Tabs
@@ -27,17 +27,17 @@ const CustomTab = props => {
                     classes={{
                         root: classes.tabsRoot,
                         indicator: classes.displayNone,
-                        scrollButtons: classes.displayNone
+                        scrollButtons: classes.displayNone  
                     }}
                     variant="scrollable"
                     scrollButtons="auto"
                 >
                 {tabs.map((prop, key) => {
-                    const icon = {};
+                    let icon = {};
                     if (prop.tabIcon) {
-                    icon = {
-                        icon: <prop.tabIcon />
-                    };
+                        icon = {
+                            icon: <prop.tabIcon />
+                        };
                     }
                     return (
                     <Tab

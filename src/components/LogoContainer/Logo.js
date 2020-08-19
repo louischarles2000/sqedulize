@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import logo from './favicon.ico';
+import logo from '../../assets/img/sqedulize-logo-colored.jpg';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import styles from '../../assets/jss/sqedulize/components/logoStyles';
 

@@ -7,6 +7,7 @@ import { grayColor } from './shared/style_utility';
 import Home from './views/Home/Home';
 import Todo from './views/TodoMode/TodoMode';
 import DevMode from './views/DevMode/DevMode';
+import TodoList from './views/TodoMode/TodoList';
 
 const App = () => {
 
@@ -18,8 +19,9 @@ const App = () => {
       <Layout>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/to-do" component={Todo} />
+          <Route path="/to-do" exact component={Todo} />
           <Route path="/dev" component={DevMode} />
+          <Route path="/to-do/selected-list" component={TodoList} />
           <Redirect to="/" />
         </Switch>
       </Layout>

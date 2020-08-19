@@ -1,6 +1,9 @@
 import { hexToRgb, whiteColor } from '../../../../shared/style_utility';
 
 const customTabsStyle = {
+  customTab:{
+    width: '100%'
+  },
   cardTitle: {
     float: "left",
     padding: "10px 10px 10px 0px",
@@ -8,6 +11,9 @@ const customTabsStyle = {
   },
   displayNone: {
     display: "none !important"
+  },
+  display: {
+    display: "block !imoprtant"
   },
   tabsRoot: {
     minHeight: "unset !important",
@@ -35,6 +41,7 @@ const customTabsStyle = {
   },
   tabSelected: {
     backgroundColor: "rgba(" + hexToRgb(whiteColor) + ", 0.2)",
+    textDecoration: 'underline',
     transition: "0.2s background-color 0.1s"
   },
   tabWrapper: {
