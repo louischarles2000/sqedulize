@@ -10,15 +10,15 @@ This is a productivity app for handling normal day-to-day tasks and developer ta
 > Firebase is used here for user authentication and as a database
 
 ## Default mode (to-do)
-The app has a default mode that is a to-do app :D.
-It will have features like;
+The app has a default mode that is a to-do app :D. <b>
+**Features:**
 - Adding a list
 - Adding tasks to the added list
 - Marking tasks status either **done** or **in progress**
 
 ## Developer mode
 The app has a mode for developers that helps keep track of projects.
-It has features like;
+**Features:**
 - Adding a new project
 - Adding a new task
 - Adding sub-tasks to the tasks
