@@ -11,6 +11,7 @@ This is a productivity app for handling normal day-to-day tasks and developer ta
 
 ## Default mode (to-do)
 The app has a default mode that is a to-do app :D. <b>
+
 **Features:**
 - Adding a list
 - Adding tasks to the added list
@@ -18,6 +19,7 @@ The app has a default mode that is a to-do app :D. <b>
 
 ## Developer mode
 The app has a mode for developers that helps keep track of projects.
+
 **Features:**
 - Adding a new project
 - Adding a new task
